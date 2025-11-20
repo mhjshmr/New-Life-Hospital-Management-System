@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="flex justify-center mt-10">
+        <div class="px-10 py-10 w-full max-w-md bg-gray-100 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex flex-col items-center">
+                <img class="w-48 h-48 mb-3 rounded-full shadow-lg" src={{doctor.user.profile_pic.url}} alt="Profile image"/>
+                <h5 class="my-1 text-4xl text-center font-bold text-gray-900 dark:text-white">{{doctor.full_name}}</h5>
+                <div class="flex gap-x-10 mt-10 justify-center">
+                    <div class="lhs justify-self-end">
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Department:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Email:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Phone:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Date of Birth:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Gender:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Working Hours:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Room:</p>
+                    </div>
+                    <div class="rhs">
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{doctor.department.name}}</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{doctor.email}}</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{doctor.phone_number}}</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{doctor.date_of_birth}}</p>
+                        {% if doctor.gender == 'F' %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Female</p>
+                        {% else %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Male</p>
+                        {% endif %}
+                        
+                        {% if doctor.working_hours == '08:00-13:00' %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Morning ({{doctor.working_hours}})</p>
+                        {% elif doctor.working_hours == '13:00-18:00' %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Noon ({{doctor.working_hours}})</p>
+                        {% else %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Night ({{doctor.working_hours}})</p>
+                            {% endif %}
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{doctor.room}}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}

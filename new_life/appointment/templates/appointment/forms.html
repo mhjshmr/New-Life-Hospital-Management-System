@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% if error %}
+        <div id="alert-1" class="flex p-4 mb-4 bg-blue-100 dark:bg-blue-200" role="alert">
+            <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-blue-700 dark:text-blue-800" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+            <span class="sr-only">Facing error! </span>
+            <div class="ml-3 text-sm font-medium text-blue-700 dark:text-blue-800">
+                {{error}}
+            </div>
+            <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-blue-100 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8 dark:bg-blue-200 dark:text-blue-600 dark:hover:bg-blue-300" data-dismiss-target="#alert-1" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>
+    {% endif %}
+
+    <h1 class="my-8 text-4xl text-center font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Appointment Form</h1>
+    <div class="my-10 mx-auto max-w-screen-sm">
+        <form method="POST" id='appointment-form' data-doctors-url={% url 'appointment:ajax_load_doctors' %} data-slots-url={% url 'appointment:ajax_load_slots' %}>
+            {% csrf_token %}
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 mb-6 w-full group">
+                    <label for="department" class="block mb-2 text-sm font-normal text-gray-900 dark:text-gray-400">Select department</label>
+                    <select id="department" name="department" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <option value="0">------------</option>
+                        {% for department in departments %}
+                        <option value={{department.pk}}>{{department.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="self-end relative z-0 mb-6 w-full group">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <input datepicker datepicker-autohide autocomplete='off' datepicker-format="yyyy-mm-dd" datepicker-orientation="down" datepicker-title="Date of Appointment" type="text" id="date" name="date" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date of appointment" required>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 mb-6 w-full group">
+                    <label for="doctor" class="block mb-2 text-sm font-normal text-gray-900 dark:text-gray-400">Choose Doctor</label>
+                    <select id="doctor" name="doctor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <option value="">------------</option>
+                        {% for doctor in doctors %}
+                            <option value={{doctor.pk}}>{{doctor.full_name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="relative z-0 mb-6 w-full group">
+                    <label for="slots" class="block mb-2 text-sm font-normal text-gray-900 dark:text-gray-400">Choose time slot</label>
+                    <select id="slots" name="slots" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-900 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <option value="">------------</option>
+                        {% for slot in slots %}
+                            <option value={{slot}}>{{slot}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            
+            {% if user.is_staff %}
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 mb-6 w-full group">
+                        <input type="id" name="pat_id" id="pat_id" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                        <label for="pat_id" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Patient ID</label>
+                    </div>
+                    <div class="relative z-0 mb-6 w-full group">
+                        <input type="text" name="reason" id="reason" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                        <label for="reason" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Reason of visit</label>
+                    </div>
+                </div>     
+                
+            {% else %}
+                <div class="relative z-0 mb-6 w-full group">
+                    <input type="text" name="reason" id="reason" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+                    <label for="reason" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Reason of visit</label>
+                </div>
+            {% endif %}
+            
+            <div class="grid md:grid-cols-1 md:gap-6">
+                <button type="submit" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $("#department").change(function () {
+            const url = $("#appointment-form").attr("data-doctors-url");  // get the url of the `load_cities` view
+            const department_id = $(this).val();  // get the selected country ID from the HTML input
+
+            $.ajax({                       // initialize an AJAX request
+                url: url,                    // set the url of the request (= /persons/ajax/load-cities/ )
+                data: {
+                    'department_id': department_id // add the country id to the GET parameters
+                },
+                success: function (data) {   // `data` is the return of the `load_cities` view function
+                    $("#doctor").html(data);  // replace the contents of the city input with the data that came from the server
+                    /*
+
+                    let html_data = '<option value="">---------</option>';
+                    data.forEach(function (city) {
+                        html_data += `<option value="${city.id}">${city.name}</option>`
+                    });
+                    console.log(html_data);
+                    $("#id_city").html(html_data);
+
+                    */
+                }
+            });
+
+        });
+        $("#doctor").change(function () {
+            const url = $("#appointment-form").attr("data-slots-url");
+            console.log(url);
+            const doctor_id = $(this).val();
+            const date = $("#date").val()
+
+            $.ajax({
+                url: url,
+                data: {
+                    'doctor_id': doctor_id,
+                    'date': date
+                },
+                success: function (data) {
+                    console.log(data)
+                    $("#slots").html(data)
+                }
+            })
+
+        });
+
+    </script>
+{% endblock content %}

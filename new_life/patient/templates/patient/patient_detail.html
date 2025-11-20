@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="flex justify-center">
+        <div class="relative px-10 py-10 w-full max-w-md bg-gray-100 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div class="absolute top-0 left-full -translate-x-full flex justify-end px-4 pt-4 z-10">
+                <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+                    <span class="sr-only">Open dropdown</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdown" class="z-10 hidden text-base list-none bg-gray-50 divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
+                    <ul class="py-1" aria-labelledby="dropdownButton">
+                    <li>
+                        <a href={% url 'appointment:view' %} class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">View appointments</a>
+                    </li>
+                    <li>
+                        <a href={% url 'patient:update' pk=patient.pk %} class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Update details</a>
+                    </li>
+                    <li>
+                        <a href={% url 'patient:delete' pk=patient.pk %} class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete account</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <img class="w-48 h-48 mb-3 rounded-full shadow-lg" src={{patient.user.profile_pic.url}} alt="Profile image"/>
+
+                <h5 class="my-1 text-4xl font-bold text-gray-900 dark:text-white">{{patient.full_name}}</h5>
+                <div class="flex gap-x-10 mt-10">
+                    <div class="lhs">
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Account Type:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Phone:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Date of Birth:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Gender:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Blood Group:</p>
+                    </div>
+                    <div class="rhs">
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Patient</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{patient.user.phone_number}}</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{patient.user.date_of_birth}}</p>
+                        {% if patient.user.gender == 'F' %}
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Female</p>
+                        {% else %}
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Male</p>
+                        {% endif %}
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{patient.user.blood_group}}</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,655 @@
+{
+    "doctors": {
+        "Dr. Christopher": {
+            "user_name": "Christ312",
+            "full_name": "Dr. Christopher Markus",
+            "email": "christ312@gmail.com",
+            "date_of_birth": "1998-07-22",
+            "gender": "M",
+            "phone_number": "+971-569142345",
+            "blood_group": "B+",
+            "department": "Oncology",
+            "eid": "171-1998-7653471-6",
+            "working_hours": "Morning",
+            "room": "D:2-17"
+        },
+        "Dr. Hayaat": {
+            "user_name": "Hayat512",
+            "full_name": "Dr. Hayaat Akram",
+            "email": "hayatna31@gmail.com",
+            "date_of_birth": "1999-04-21",
+            "gender": "F",
+            "phone_number": "+971-543252846",
+            "blood_group": "B-",
+            "department": "Pediatrics",
+            "eid": "132-2063-432715-9",
+            "working_hours": "Night",
+            "room": "A:1-14"
+        },
+        "Dr. Jamal": {
+            "user_name": "Jamal_Sayed24",
+            "full_name": "Dr. Jamal Sayyed",
+            "email": "jamal24@gmail.com",
+            "date_of_birth": "1999-04-21",
+            "gender": "M",
+            "phone_number": "+971-545656428",
+            "blood_group": "AB+",
+            "department": "Cardiology",
+            "eid": "982-5534-286582-1",
+            "working_hours": "Noon",
+            "room": "A:1-14"
+        },
+        "Dr. Leila": {
+            "user_name": "leila_oo_leila",
+            "full_name": "Dr. Leila Najeeb",
+            "email": "leila141@gmail.com",
+            "date_of_birth": "2001-07-14",
+            "gender": "F",
+            "phone_number": "+971-545542798",
+            "blood_group": "B+",
+            "department": "Anaesthesia",
+            "eid": "253-3280-1745298-8",
+            "working_hours": "Night",
+            "room": "C:4-12"
+        },
+        "Dr. Fareeda": {
+            "user_name": "Fareda.454",
+            "full_name": "Dr. Fareeda Gulshan",
+            "email": "fareeda543@gmail.com",
+            "date_of_birth": "1967-05-02",
+            "gender": "F",
+            "phone_number": "+971-565824656",
+            "blood_group": "O+",
+            "department": "Psychiatry",
+            "eid": "357-3621-2538296-8",
+            "working_hours": "Morning",
+            "room": "B:3-13"
+        },
+        "Dr. Yousefzai": {
+            "user_name": "Yousef331",
+            "full_name": "Dr. Yousef Kaamran",
+            "email": "yousuf313@gmail.com",
+            "date_of_birth": "1898-02-25",
+            "gender": "M",
+            "phone_number": "+971-565378952",
+            "blood_group": "A+",
+            "department": "Urinology",
+            "eid": "268-2538-3574829-8",
+            "working_hours": "Morning",
+            "room": "C:4-12"
+        },
+        "Dr. John Abraham": {
+            "user_name": "John_Abb",
+            "full_name": "Dr. John Abraham",
+            "email": "johnnyabby@gmail.com",
+            "date_of_birth": "1992-07-08",
+            "gender": "M",
+            "phone_number": "+971-545274598",
+            "blood_group": "O-",
+            "department": "Orthopaedics",
+            "eid": "132-2063-536297-6",
+            "working_hours": "Noon",
+            "room": "A:1-07"
+        },
+        "Dr. Fatima Ghulam": {
+            "user_name": "Fatima224",
+            "full_name": "Dr. Fatima Ghulam",
+            "email": "fatooh24@gmail.com",
+            "date_of_birth": "1994-11-27",
+            "gender": "F",
+            "phone_number": "+971-552457921",
+            "blood_group": "O+",
+            "department": "Gynaecology",
+            "eid": "254-8678-328629-6",
+            "working_hours": "Morning",
+            "room": "B:4-17"
+        },
+        "Dr. Arzoo Iftekhar": {
+            "user_name": "Arzoo_717",
+            "full_name": "Dr. Arzoo Iftekhar",
+            "email": "arzoo72@gmail.com",
+            "date_of_birth": "1998-01-14",
+            "gender": "F",
+            "phone_number": "+971-546736472",
+            "blood_group": "A-",
+            "department": "Dental",
+            "eid": "352-7892-3692014-7",
+            "working_hours": "Night",
+            "room": "A:2-12"
+        },
+        "Dr. Muhammed Ghafoor": {
+            "user_name": "Mohd_21",
+            "full_name": "Dr. Mohammed Ghafoor",
+            "email": "mehdi776@gmail.com",
+            "date_of_birth": "1991-06-28",
+            "gender": "M",
+            "phone_number": "+971-585647869",
+            "blood_group": "B-",
+            "department": "Dermatology",
+            "eid": "544-5456-4862644-7",
+            "working_hours": "Night",
+            "room": "C:4-12"
+        },
+        "Dr. Jibran Ali": {
+            "user_name": "Jibran42",
+            "full_name": "Dr. Jibran Ali",
+            "email": "jibbyal32@gmail.com",
+            "date_of_birth": "1994-03-12",
+            "gender": "M",
+            "phone_number": "+971-545891497",
+            "blood_group": "AB-",
+            "department": "Surgery",
+            "eid": "527-2683-274932-2",
+            "working_hours": "Noon",
+            "room": "A:2-06"
+        },
+        "Dr. Afshin Iranpour ": {
+            "user_name": "Afs_hin",
+            "full_name": "Dr. Afshin Iranpour",
+            "email": "afshin00@gmail.com",
+            "date_of_birth": "1979-8-2",
+            "gender": "M",
+            "phone_number": "+971-521431252",
+            "blood_group": "B+",
+            "department": "Gynaecology",
+            "eid": "111-1111-1111111-1",
+            "working_hours": "Night",
+            "room": "C:3-11"
+        },
+        "Dr. Amro Ali Abdelazim": {
+            "user_name": "amro_ali",
+            "full_name": "Dr. Amro Ali Abdelazim",
+            "email": "amro.abdel22@gmail.com",
+            "date_of_birth": "1977-2-22",
+            "gender": "M",
+            "phone_number": "+971-551531262",
+            "blood_group": "B+",
+            "department": "Cardiology",
+            "eid": "784-1977-1235468-1",
+            "working_hours": "Morning",
+            "room": "C:3-12"
+        },
+        "Dr. Safaa Rihwai": {
+            "user_name": "saf_rih",
+            "full_name": "Dr. Safaa Rihwai",
+            "email": "safrihwai44@gmail.com",
+            "date_of_birth": "1982-10-15",
+            "gender": "M",
+            "phone_number": "+971-521231232",
+            "blood_group": "A+",
+            "department": "Cardiology",
+            "eid": "784-1982-2346723-1",
+            "working_hours": "Noon",
+            "room": "C:4-11"
+        },
+        "Dr. Huda Nasser": {
+            "user_name": "huda_nas",
+            "full_name": "Dr. Huda Nasser",
+            "email": "hudanassermy@gmail.com",
+            "date_of_birth": "1981-5-7",
+            "gender": "M",
+            "phone_number": "+971-561281272",
+            "blood_group": "B+",
+            "department": "Orthopaedics",
+            "eid": "784-1981-1256214-1",
+            "working_hours": "Morning",
+            "room": "C:3-10"
+        },
+        "Dr. Taghreed Almahmeed": {
+            "user_name": "Taghreed_alma",
+            "full_name": "Dr. Taghreed Almahmeed",
+            "email": "taghreedalma@gmail.com",
+            "date_of_birth": "1975-9-17",
+            "gender": "M",
+            "phone_number": "+971-551531222",
+            "blood_group": "B+",
+            "department": "Orthopaedics",
+            "eid": "784-1975-1324567-1",
+            "working_hours": "Night",
+            "room": "C:4-12"
+        },
+        "Dr. Maher A Abbas": {
+            "user_name": "Maher_abbas",
+            "full_name": "Dr. Maher A Abbas",
+            "email": "Maheraabbas@gmail.com",
+            "date_of_birth": "1976-6-12",
+            "gender": "M",
+            "phone_number": "+971-551241252",
+            "blood_group": "A+",
+            "department": "Cardiology",
+            "eid": "784-1976-1345127-1",
+            "working_hours": "Noon",
+            "room": "C:4-12"
+        },
+        "Dr. Thamir Al-Kasab": {
+            "user_name": "Thamir_kasab",
+            "full_name": "Dr. Thamir Al-Kasab",
+            "email": "thamirkasab1976@gmail.com",
+            "date_of_birth": "1976-8-22",
+            "gender": "M",
+            "phone_number": "+971-561623133",
+            "blood_group": "B-",
+            "department": "Urinology",
+            "eid": "784-1976-1236789-1",
+            "working_hours": "Night",
+            "room": "C:5-10"
+        },
+        "Dr. Gokhan Cipe": {
+            "user_name": "gok_cipe",
+            "full_name": "Dr. Gokhan Cipe",
+            "email": "gokhancipe33@gmail.com",
+            "date_of_birth": "1980-12-30",
+            "gender": "M",
+            "phone_number": "+971-551331532",
+            "blood_group": "AB+",
+            "department": "Gynaecology",
+            "eid": "784-1980-1345211-1",
+            "working_hours": "Morning",
+            "room": "C:3-10"
+        },
+        "Dr. Dorai Ramanathan": {
+            "user_name": "dorai_ramana",
+            "full_name": "Dr. Dorai Ramanathan",
+            "email": "dorairamana65@gmail.com",
+            "date_of_birth": "1975-12-13",
+            "gender": "M",
+            "phone_number": "+971-521531632",
+            "blood_group": "B+",
+            "department": "Oncology",
+            "eid": "784-1975-1236752-1",
+            "working_hours": "Morning",
+            "room": "C:5-13"
+        },
+        "Dr. Mahmoud Tabbal": {
+            "user_name": "Mah_Tab",
+            "full_name": "Dr. Mahmoud Tabbal",
+            "email": "mahmoudtabbal23@gmail.com",
+            "date_of_birth": "1978-11-22",
+            "gender": "M",
+            "phone_number": "+971-521231232",
+            "blood_group": "B+",
+            "department": "Gynaecology",
+            "eid": "784-1978-1545674-1",
+            "working_hours": "Morning",
+            "room": "C:3-9"
+        }
+    },
+    "departments": {
+        "Oncology": {
+            "name": "Oncology",
+            "number_of_staffs": 50
+        },
+        "Pediatrics": {
+            "name": "Pediatrics",
+            "number_of_staffs": 34
+        },
+        "Dental": {
+            "name": "Dental",
+            "number_of_staffs": 38
+        },
+        "Anaesthesia": {
+            "name": "Anaesthesia",
+            "number_of_staffs": 57
+        },
+        "Gynaecology": {
+            "name": "Gynaecology",
+            "number_of_staffs": 32
+        },
+        "Orthopaedics": {
+            "name": "Orthopaedics",
+            "number_of_staffs": 42
+        },
+        "NeUrinology": {
+            "name": "NeUrinology",
+            "number_of_staffs": 62
+        },
+        "Surgery": {
+            "name": "Surgery",
+            "number_of_staffs": 92
+        },
+        "Psychiatry": {
+            "name": "Psychiatry",
+            "number_of_staffs": 38
+        },
+        "Cardiology": {
+            "name": "Cardiology",
+            "number_of_staffs": 58
+        },
+        "Dermatology": {
+            "name": "Dermatology",
+            "number_of_staffs": 36
+        },
+        "Urinology": {
+            "name": "Urinology",
+            "number_of_staffs": 41
+        }
+    },
+    "patients": {
+        "Nadia Hussain": {
+            "user_name": "nadia_huss",
+            "full_name": "Nadia Hussain",
+            "email": "nadi44@gmail.com",
+            "date_of_birth": "2004-04-23",
+            "phone_number": "+971-524569716",
+            "gender": "F",
+            "blood_group": "B+",
+            "address": "Near Al Khan, Sharjah",
+            "eid": "123-2649-352249-7"
+        },
+        "Ayesha Naeem": {
+            "user_name": "Ashy442",
+            "full_name": "Ayesha Naeem",
+            "email": "ayesh678@hotmail.com",
+            "date_of_birth": "2005-05-05",
+            "phone_number": "+971-525791857",
+            "gender": "F",
+            "blood_group": "O+",
+            "address": "Near Jabal Jais, RAK",
+            "eid": "292-2628-264828-8"
+        },
+        "Saleem Husnain": {
+            "user_name": "Sal_hus778",
+            "full_name": "Saleem Husnain",
+            "email": "saleem2488@gmail.com",
+            "date_of_birth": "1968-10-25",
+            "phone_number": "+971-552548958",
+            "gender": "M",
+            "blood_group": "B-",
+            "address": "Al Majaz 2, Sharjah",
+            "eid": "274-2740-3628492-8"
+        },
+        "Abdullah Akhter": {
+            "user_name": "aboodi77",
+            "full_name": "Abdullah Akhter",
+            "email": "aboodi77@outlook.com",
+            "date_of_birth": "2001-11-11",
+            "phone_number": "+971-542458952",
+            "gender": "M",
+            "blood_group": "A+",
+            "address": "Golden eye, Fujairah",
+            "eid": "274-3849-365483-7"
+        },
+        "Faaria Muhammed": {
+            "user_name": "Faaria876",
+            "full_name": "Faaria Muhammed",
+            "email": "faaria658@gmail.com",
+            "date_of_birth": "1996-04-19",
+            "phone_number": "+971-564862578",
+            "gender": "F",
+            "blood_group": "B+",
+            "address": "Al Jazeera, RAK",
+            "eid": "854-7547-845858-8"
+        },
+        "Ikram Khalid": {
+            "user_name": "Ikram443",
+            "full_name": "Ikram Khalid",
+            "email": "ikram443@gmail.com",
+            "date_of_birth": "2003-06-27",
+            "phone_number": "+971-562556523",
+            "gender": "F",
+            "blood_group": "O-",
+            "address": "Al Qasmia, Sharjah",
+            "eid": "282-2849-2649203-4"
+        },
+        "Khalid Hameed": {
+            "user_name": "khalood98",
+            "full_name": "Khalid Hameed",
+            "email": "khalidham4@gmail.com",
+            "date_of_birth": "2002-03-15",
+            "phone_number": "+971-525488454",
+            "gender": "M",
+            "blood_group": "A+",
+            "address": "Rolla, Sharjah",
+            "eid": "454-5042-3658392-5"
+        },
+        "Abdul Azeem": {
+            "user_name": "abdulazeem.948",
+            "full_name": "Abdul Azeem",
+            "email": "abdulazeem948@gmail.com",
+            "date_of_birth": "1994-03-02",
+            "phone_number": "+971-565478842",
+            "gender": "M",
+            "blood_group": "AB-",
+            "address": "Qasba, Sharjah",
+            "eid": "482-4682-481589-9"
+        },
+        "Fauzia Kareem": {
+            "user_name": "Fauz_Kareem458",
+            "full_name": "Fauzia Kareem",
+            "email": "fauzia232@gmail.com",
+            "date_of_birth": "2001-02-16",
+            "phone_number": "+971-551585489",
+            "gender": "F",
+            "blood_group": "O+",
+            "address": "Jazaria, Ajman",
+            "eid": "356-4756-4786586-8"
+        },
+        "Parveen Ahmed": {
+            "user_name": "Parveen.778",
+            "full_name": "Parveen Ahmed",
+            "email": "parveenah76@gmail.com",
+            "date_of_birth": "2005-09-25",
+            "phone_number": "+971-502974183",
+            "gender": "F",
+            "blood_group": "B-",
+            "address": "Al Hamriya, RAK",
+            "eid": "657-4768-476799-6"
+        },
+        "Alia Baig": {
+            "user_name": "alia_baig",
+            "full_name": "Alia Baig",
+            "email": "aliabaig@gmail.com",
+            "date_of_birth": "1999-12-12",
+            "phone_number": "+971-523374952",
+            "gender": "F",
+            "blood_group": "A-",
+            "address": "Near Deira, Dubai",
+            "eid": "784-1999-1235674-1"
+        },
+        "Ali Imran": {
+            "user_name": "aLi_imr",
+            "full_name": "ALi Imran",
+            "email": "ali.imran@gmail.com",
+            "date_of_birth": "1983-7-13",
+            "phone_number": "+971-503574952",
+            "gender": "M",
+            "blood_group": "O-",
+            "address": "Near Sahara Mall, Sharjah",
+            "eid": "784-1983-2543712-1"
+        },
+        "Dilip Qumar": {
+            "user_name": "dilip_qumr",
+            "full_name": "Dilip Qumar",
+            "email": "dilpqamr22@gmail.com",
+            "date_of_birth": "1973-12-22",
+            "phone_number": "+971-553424951",
+            "gender": "M",
+            "blood_group": "B-",
+            "address": "Near Rak Mall, RAK",
+            "eid": "784-1971-4223466-1"
+        },
+        "Nadir Ali": {
+            "user_name": "Nadir_Ali",
+            "full_name": "Nadir Ali",
+            "email": "ali.nadir@gmail.com",
+            "date_of_birth": "1981-3-19",
+            "phone_number": "+971-503474452",
+            "gender": "M",
+            "blood_group": "B+",
+            "address": "Near Butina, Sharjah",
+            "eid": "784-1981-1278934-1"
+        },
+        "Emily Clerk": {
+            "user_name": "emily_clerk",
+            "full_name": "Emily Clerk",
+            "email": "Emily11clerk@gmail.com",
+            "date_of_birth": "1980-12-22",
+            "phone_number": "+971-583272952",
+            "gender": "F",
+            "blood_group": "O-",
+            "address": "Near Emirates Mall, Dubai",
+            "eid": "784-1980-2345123-1"
+        },
+        "Sarah John": {
+            "user_name": "Sarah_John",
+            "full_name": "Sarah John",
+            "email": "sarahjohn234@gmail.com",
+            "date_of_birth": "1989-3-13",
+            "phone_number": "+971-552644932",
+            "gender": "F",
+            "blood_group": "B-",
+            "address": "Near Majaz, Sharjah",
+            "eid": "784-1989-1435671-1"
+        },
+        "Asif Ghias": {
+            "user_name": "asif_ghias",
+            "full_name": "Asif Ghias",
+            "email": "asifghiasuddin@gmail.com",
+            "date_of_birth": "1978-2-12",
+            "phone_number": "+971-502343932",
+            "gender": "M",
+            "blood_group": "B+",
+            "address": "Near Sports City, Dubai",
+            "eid": "784-1978-1443671-1"
+        },
+        "Mahad Atif": {
+            "user_name": "mahad_atif",
+            "full_name": "Mahad Atif",
+            "email": "mahadatif2015@gmail.com",
+            "date_of_birth": "2015-2-16",
+            "phone_number": "+971-553644332",
+            "gender": "M",
+            "blood_group": "B-",
+            "address": "Near Al Nadha, Sharjah",
+            "eid": "784-2015-1433341-1"
+        },
+        "Hamza Hussain": {
+            "user_name": "hamza_hussain",
+            "full_name": "Hamza Hussain",
+            "email": "hamzahussain1nonly@gmail.com",
+            "date_of_birth": "2017-5-1",
+            "phone_number": "+971-562343932",
+            "gender": "M",
+            "blood_group": "A-",
+            "address": "Near Qasba, Sharjah",
+            "eid": "784-2017-1233631-1"
+        }
+    },
+    "staffs": {
+        "Malhotra Raj": {
+            "user_name": "mal_raj",
+            "full_name": "Mal Raj",
+            "email": "mal_raj@gmail.com",
+            "date_of_birth": "1975-2-1",
+            "gender": "M",
+            "phone_number": "+971-555469132",
+            "blood_group": "AB+",
+            "department": "Oncology",
+            "eid": "784-1975-1254313-1",
+            "working_hours": "Night",
+            "role": "IT Technician"
+        },
+        "Qamar Junaid": {
+            "user_name": "Qamar_junaid",
+            "full_name": "Qamar Junaid",
+            "email": "qamar_junaid23@gmail.com",
+            "date_of_birth": "1999-6-2",
+            "gender": "F",
+            "phone_number": "+971-553463132",
+            "blood_group": "A+",
+            "department": "Oncology",
+            "eid": "784-1999-1234313-1",
+            "working_hours": "Morning",
+            "role": "Receptionist"
+        },
+        "Junaid Amir": {
+            "user_name": "junaid_amir",
+            "full_name": "Junaid Amir",
+            "email": "jun_amir21@gmail.com",
+            "date_of_birth": "1998-5-7",
+            "gender": "M",
+            "phone_number": "+971-525469432",
+            "blood_group": "B+",
+            "department": "Gynaecology",
+            "eid": "784-1998-1224313-1",
+            "working_hours": "Morning",
+            "role": "IT Technician"
+        },
+        "Manahil Irfan": {
+            "user_name": "manahil_Irfan",
+            "full_name": "Manahil Irfan",
+            "email": "manahilirfan1989@gmail.com",
+            "date_of_birth": "1989-9-13",
+            "gender": "F",
+            "phone_number": "+971-565363132",
+            "blood_group": "A+",
+            "department": "Oncology",
+            "eid": "784-1989-6222323-1",
+            "working_hours": "Noon",
+            "role": "XRay Technician"
+        },
+        "Afzal Khan": {
+            "user_name": "afzal_khan",
+            "full_name": "Afzal Khan",
+            "email": "afzalkhanmy@gmail.com",
+            "date_of_birth": "1975-10-23",
+            "gender": "M",
+            "phone_number": "+971-525465832",
+            "blood_group": "B+",
+            "department": "Cardiology",
+            "eid": "784-1975-1254313-1",
+            "working_hours": "Morning",
+            "role": "Nurse"
+        },
+        "Pooja Kumar": {
+            "user_name": "pooja_kumar",
+            "full_name": "Pooja Kumar",
+            "email": "poojakumar34@gmail.com",
+            "date_of_birth": "1980-12-18",
+            "gender": "M",
+            "phone_number": "+971-525434142",
+            "blood_group": "O-",
+            "department": "Urinology",
+            "eid": "784-1980-3245315-1",
+            "working_hours": "Night",
+            "role": "Nurse"
+        },
+        "Ranveer Singh": {
+            "user_name": "ranveer_singh",
+            "full_name": "Ranveer Singh",
+            "email": "Ranveersingh@gmail.com",
+            "date_of_birth": "1977-8-15",
+            "gender": "M",
+            "phone_number": "+971-565463812",
+            "blood_group": "B+",
+            "department": "Pediatrics",
+            "eid": "784-1975-1254313-1",
+            "working_hours": "Morning",
+            "role": "Lab Technician"
+        }
+
+    },
+    "roles": {
+        "IT Technician": {
+            "name": "IT Technician",
+            "number_of_staff": 32 
+        },
+        "Nurse": {
+            "name": "Nurse",
+            "number_of_staff": 39 
+        },
+        "Receptionist": {
+            "name": "Receptionist",
+            "number_of_staff": 10
+        },
+        "XRay Technician": {
+            "name": "XRay Technician",
+            "number_of_staff": 42 
+        },
+        "Lab Technician": {
+            "name": "Lab Technician",
+            "number_of_staff": 35 
+        }
+
+    }
+}

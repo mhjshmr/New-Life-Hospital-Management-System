@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="my-10 text-4xl text-center font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">{{department.name}}</h1>
+
+    <div class="grid grid-cols-3 justify-items-center gap-y-5">
+        {% for doctor in department.doctor_set.all %}
+            <div class="py-10 w-full max-w-sm bg-gray-100 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <div class="flex flex-col items-center">
+                    <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src={{doctor.user.profile_pic.url}} alt="Profile image"/>
+                    <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{{doctor.full_name}}</h5>
+                    <div class="flex mt-4 space-x-3 md:mt-6">
+                        <a href={% url 'doctor:detail' pk=doctor.pk %} class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">View profile</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

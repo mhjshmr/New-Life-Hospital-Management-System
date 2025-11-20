@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="my-10 text-4xl text-center font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Our Departments</h1>
+
+    <div class="grid grid-cols-3 justify-items-center gap-y-5">
+        {% for department in department_list %}    
+            <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <a href={% url 'department:detail' pk=department.pk %}>
+                    <img class="rounded-t-lg" src="https://www.ajhospital.in/storage/files/Dept/radiation-onco.jpg" alt="Banner" />
+                </a>
+                <div class="p-5">
+                    <a href={% url 'department:detail' pk=department.pk %}>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{department.name}}</h5>
+                    </a>
+                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Number of staffs: {{department.number_of_staffs}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

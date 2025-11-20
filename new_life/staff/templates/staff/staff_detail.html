@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="flex justify-center mt-10">
+        <div class="px-10 py-10 w-full max-w-md bg-gray-100 border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex flex-col items-center">
+                <img class="w-48 h-48 mb-3 rounded-full shadow-lg" src={{staff.user.profile_pic.url}} alt="Profile image"/>
+                <h5 class="my-1 text-4xl font-bold text-gray-900 dark:text-white">{{staff.full_name}}</h5>
+                <div class="flex gap-x-10 mt-10">
+                    <div class="lhs">
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Designation:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Department:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Email:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Phone:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Date of Birth:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Gender:</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Working Hours:</p>
+                    </div>
+                    <div class="rhs">
+                        <p class="text-lg text-gray-500 dark:text-gray-400">Staff</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{staff.department.name}}</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{staff.email}}</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{staff.phone_number}}</p>
+                        <p class="text-lg text-gray-500 dark:text-gray-400">{{staff.date_of_birth}}</p>
+                        {% if staff.gender == 'F' %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Female</p>
+                        {% else %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Male</p>
+                        {% endif %}
+                        
+                        {% if staff.working_hours == '08:00-13:00' %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Morning ({{staff.working_hours}})</p>
+                        {% elif staff.working_hours == '13:00-18:00' %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Noon ({{staff.working_hours}})</p>
+                        {% else %}
+                            <p class="text-lg text-gray-500 dark:text-gray-400">Night ({{staff.working_hours}})</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

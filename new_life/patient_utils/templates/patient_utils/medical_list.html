@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="appointment-list my-10">
+    <h1 class="my-10 text-4xl text-center font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Medical Reports</h1>
+    {% if medicalreport_list %}
+        <div class="grid grid-cols-3 justify-items-center gap-5">
+            {% for report in medicalreport_list %}
+                <div class="relative pb-10 w-full max-w-md bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
+                    <div class="flex gap-x-10 mt-10 justify-center">
+                        <div class="lhs">
+                            <p class="text-base text-gray-500 dark:text-gray-400">Doctor:</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">XRay:</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">Lab:</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">Medicine:</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">Instructions:</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">Appointment:</p>
+                        </div>
+                        <div class="rhs">
+                            <p class="text-base text-gray-500 dark:text-gray-400">{{report.prescription.doctor.full_name}}</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">{{report.xray}}</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">{{report.lab}}</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">{{report.prescription.medicines}}</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">{{report.prescription.instructions}}</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400">{{report.prescription.appointment}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h5 class="mb-1 text-lg text-center font-medium text-gray-900 dark:text-white">No appointments made</h5>
+    {% endif %}
+</div>
+{% endblock content %}
